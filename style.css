@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    width: 100%;
+    max-width: 950px;
+    padding: 28px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.container > p {
+    color: #666;
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+#task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+input, select, button {
+    padding: 11px;
+    font-size: 1rem;
+    border-radius: 6px;
+}
+
+input {
+    flex: 1;
+    min-width: 100px;
+    border: 1px solid #ccc;
+}
+
+select {
+    border: 1px solid #ccc;
+    background: white;
+}
+
+button {
+    border: none;
+    background: #27ae60;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #219150;
+}
+
+.summary {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.summary p {
+    flex: 1;
+    background: #eaf3fc;
+    color: #333;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+#task-list {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.task-name {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+.priority {
+    font-size: 0.85rem;
+    color: #555;
+    background: #eee;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.task-item.completed .task-name {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.complete-button {
+    background: #2980b9;
+    padding: 7px 10px;
+}
+
+.delete-button {
+    background: #e74c3c;
+    padding: 7px 10px;
+}
+
+#empty-message {
+    color: #777;
+    text-align: center;
+    padding: 18px;
+}
+
+@media (max-width: 650px) {
+    .container {
+        padding: 18px;
+    }
+
+    #task-form {
+        flex-direction: column;
+    }
+
+    .summary {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .task-item {
+        flex-wrap: wrap;
+    }
+}

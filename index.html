@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Helper - Kegiatan Harian</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Daily Helper</h1>
+        <p>Catat kegiatanmu supaya tidak lupa!</p>
+
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="Masukkan kegiatan..." required>
+            <select id="priority-input">
+                <option value="Sedang">Prioritas Sedang</option>
+                <option value="Tinggi">Prioritas Tinggi</option>
+                <option value="Rendah">Prioritas Rendah</option>
+            </select>
+            <button type="submit">Tambah Tugas</button>
+        </form>
+
+        <div class="summary">
+            <p>Total: <span id="total-count">0</span></p>
+            <p>Selesai: <span id="done-count">0</span></p>
+            <p>Belum selesai: <span id="active-count">0</span></p>
+        </div>
+
+        <h2>Daftar Kegiatan</h2>
+        <ul id="task-list"></ul>
+        <p id="empty-message">Belum ada kegiatan. Tambahkan tugas pertamamu!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
